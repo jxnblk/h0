@@ -57,9 +57,11 @@ Function that returns an element creation function with the given tagname.
 The returned function accepts either a plain object to set attributes, or a string or child elements to return an element.
 
 ```js
-h('div') // returns an element creation function
+h('div')
+// returns an element creation function
 
-h('div')({ id: 'hi' }) // returns an element creation function with attributes
+h('div')({ id: 'hi' })
+// returns an element creation function with attributes
 
 h('div')({ id: 'hi' })('hello')
 // returns a DOM element with an id and text content
