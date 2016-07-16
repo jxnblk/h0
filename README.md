@@ -3,6 +3,8 @@
 
 Hyperminimal functional DOM element microlibrary
 
+[![Build Status](https://travis-ci.org/jxnblk/h0.svg?branch=master)](https://travis-ci.org/jxnblk/h0)
+
 **Experimental**
 
 ```sh
