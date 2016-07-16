@@ -76,4 +76,23 @@ h('div')(
 // </div>
 ```
 
+---
+
+## Size
+
+
+
+> h0@1.0.0-beta.1 size /Users/jxn/repos/h0
+> bundle-size ./dist/index.js && bundle-size ./dist
+
+[ { packages: './dist/index.js',
+    bundle: '4.92 kB',
+    min: '3.88 kB',
+    gzip: '1.77 kB' } ]
+[ { packages: './dist',
+    bundle: '4.91 kB',
+    min: '3.88 kB',
+    gzip: '1.74 kB' } ]
+
+
 MIT License

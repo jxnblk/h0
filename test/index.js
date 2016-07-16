@@ -53,19 +53,22 @@ test('creates multiple instances with the same configured function', t => {
 })
 
 test('combines multiple arguments to props', t => {
+  t.plan(2)
   const a = h('a')({ style: { color: 'blue' } })
   const link = a({ href: '#hi' })('hello')
-  console.log(link.outerHTML)
+  t.regex(link.outerHTML, /href/)
+  t.regex(link.outerHTML, /style/)
 })
 
 test('is nestable', t => {
-  t.plan(3)
+  t.plan(4)
   const tree = h('div')(
     h('h1')('hello'),
     h('p')('hi')
   )
   t.is(tree.tagName, 'DIV')
   t.regex(tree.innerHTML, /^<h1>/)
-  t.regex(tree.innerHTML, /hello|hi/)
+  t.regex(tree.innerHTML, /hello/)
+  t.regex(tree.innerHTML, /hi/)
 })
 

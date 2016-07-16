@@ -26,9 +26,11 @@ const container = h('div')({
 })
 
 const App = () => container(
-  h1('hello h0'),
-  p('Hyperminimal functional DOM element microlibrary'),
-  a({ href: 'https://github.com/jxnblk/h0' })('GitHub'),
+  h('header')(
+    h1('hello h0'),
+    p('Hyperminimal functional DOM element microlibrary'),
+    a({ href: 'https://github.com/jxnblk/h0' })('GitHub')
+  ),
   pre(`const tree = h('div')(
   h('h1')('hello')
 )`)
