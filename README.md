@@ -1,6 +1,8 @@
 
 # h0
 
+![h0](https://cloud.githubusercontent.com/assets/3451712/16896009/c90f18f0-4b54-11e6-81e3-dbde27b3fcb0.png)
+
 Hyperminimal functional DOM element microlibrary
 
 [![Build Status](https://travis-ci.org/jxnblk/h0.svg?branch=master)](https://travis-ci.org/jxnblk/h0)
