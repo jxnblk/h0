@@ -1,8 +1,8 @@
 {
   "name": "h0",
-  "version": "1.0.0-beta.2",
+  "version": "1.0.0-beta.3",
   "description": "Hyperminimal functional DOM element microlibrary",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "rollup demo/entry.js -o demo/bundle.js",
     "size": "bundle-size ./dist/index.js",
