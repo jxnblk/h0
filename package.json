@@ -1,6 +1,6 @@
 {
   "name": "h0",
-  "version": "1.0.0-beta.1",
+  "version": "1.0.0-beta.2",
   "description": "Hyperminimal functional DOM element microlibrary",
   "main": "index.js",
   "scripts": {

@@ -3,6 +3,8 @@
 
 Hyperminimal functional DOM element microlibrary
 
+**Experimental**
+
 ```sh
 npm i h0
 ```
