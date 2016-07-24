@@ -7,32 +7,30 @@
   "title": "",
   "branch": "",
   "style": {
-    "name": "Brutalist",
+    "name": "Humanist",
     "componentSet": {
       "nav": "nav/BasicNav",
-      "header": "header/BasicHeader",
-      "article": "article/MarkdownArticle",
+      "header": "header/LightBannerHeader",
+      "article": "article/ReaderArticle",
       "footer": "footer/BasicFooter"
     },
-    "fontFamily": "Consolas, \"Liberation Mono\", Menlo, Courier, monospace",
-    "heading": {},
-    "typeScale": [
-      48,
-      32,
-      20,
-      18,
-      16,
-      14,
-      12
-    ],
+    "fontFamily": "Athelas, Georgia, serif",
+    "heading": {
+      "fontWeight": 400,
+      "textTransform": "uppercase",
+      "letterSpacing": "0.1em"
+    },
     "colors": {
-      "text": "#333",
+      "text": "#003761",
       "background": "#fff",
-      "primary": "#666",
-      "secondary": "#888",
-      "highlight": "#1f80ff",
-      "muted": "#f6f6f6",
-      "border": "#eee"
+      "primary": "#08e",
+      "secondary": "#006bbd",
+      "highlight": "#00f0e0",
+      "muted": "#c7e6ff",
+      "border": "#c7e6ff"
+    },
+    "layout": {
+      "maxWidth": 768
     }
   },
   "content": [
