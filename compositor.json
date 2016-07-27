@@ -7,30 +7,26 @@
   "title": "",
   "branch": "",
   "style": {
-    "name": "Humanist",
+    "name": "Swiss",
     "componentSet": {
       "nav": "nav/BasicNav",
-      "header": "header/LightBannerHeader",
-      "article": "article/ReaderArticle",
+      "header": "header/SwissHeader",
+      "article": "article/SwissArticle",
       "footer": "footer/BasicFooter"
     },
-    "fontFamily": "Athelas, Georgia, serif",
+    "fontFamily": "\"Helvetica Neue\", Helvetica, Arial, sans-serif",
     "heading": {
-      "fontWeight": 400,
-      "textTransform": "uppercase",
-      "letterSpacing": "0.1em"
+      "fontWeight": 700,
+      "letterSpacing": "-0.01em"
     },
     "colors": {
-      "text": "#003761",
+      "text": "#000",
       "background": "#fff",
-      "primary": "#08e",
-      "secondary": "#006bbd",
-      "highlight": "#00f0e0",
-      "muted": "#c7e6ff",
-      "border": "#c7e6ff"
-    },
-    "layout": {
-      "maxWidth": 768
+      "primary": "#05a",
+      "secondary": "#444",
+      "highlight": "#f30",
+      "border": "#ccc",
+      "muted": "#eee"
     }
   },
   "content": [
