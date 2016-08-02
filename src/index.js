@@ -16,7 +16,13 @@ const applyProps = tag => props => (...args) => {
 
   const el = h(tag)(...args)
   const p = transformProps(props)
-  Object.keys(p).forEach(k => el.setAttribute(k, p[k]))
+  Object.keys(p).forEach(k => {
+    if(/^on/.test(k)) {
+      el[k] = p[k]
+    } else {
+      el.setAttribute(k, p[k])
+    }
+  })
   return el
 }
 
