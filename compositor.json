@@ -7,31 +7,30 @@
   "title": "",
   "branch": "",
   "style": {
-    "name": "Material",
+    "name": "Humanist",
     "componentSet": {
-      "nav": "nav/AbsoluteNav",
-      "header": "header/GradientHeader",
-      "article": "article/BasicArticle",
+      "nav": "nav/BasicNav",
+      "header": "header/LightBannerHeader",
+      "article": "article/ReaderArticle",
       "footer": "footer/BasicFooter"
     },
-    "fontFamily": "Roboto, sans-serif",
+    "fontFamily": "Athelas, Georgia, serif",
     "heading": {
-      "fontWeight": 500,
-      "letterSpacing": "-0.01em"
+      "fontWeight": 400,
+      "textTransform": "uppercase",
+      "letterSpacing": "0.1em"
     },
     "colors": {
-      "text": "#212121",
+      "text": "#121212",
       "background": "#fff",
-      "primary": "#2196f3",
-      "secondary": "#1565c0",
-      "highlight": "#ff4081",
-      "border": "#e0e0e0",
-      "muted": "#f5f5f5"
+      "primary": "#ee5544",
+      "secondary": "#005499",
+      "highlight": "#00bd78",
+      "border": "#ddd",
+      "muted": "#f3f3f3"
     },
     "layout": {
-      "centered": true,
-      "bannerHeight": "80vh",
-      "maxWidth": 896
+      "maxWidth": 768
     }
   },
   "content": [
