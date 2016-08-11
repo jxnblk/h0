@@ -64,12 +64,12 @@ The returned function accepts either a plain object to set attributes, or a stri
 h('div')
 // returns an element creation function
 
-h('div')({ id: 'hi' })
+h('div')({ class: 'hi' })
 // returns an element creation function with attributes
 
-h('div')({ id: 'hi' })('hello')
+h('div')({ class: 'hi' })('hello')
 // returns a DOM element with an id and text content
-// <div id='hi'>hello</div>
+// <div class='hi'>hello</div>
 
 h('div')('hello')
 // returns a DOM element with text content
