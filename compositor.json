@@ -1,0 +1,85 @@
+{
+  "name": "jxnblk/h0",
+  "version": "0.1.4",
+  "libraries": {
+    "xv": "^1.1.13"
+  },
+  "title": "",
+  "branch": "",
+  "style": {
+    "name": "Williamsburg",
+    "componentSet": {
+      "nav": "nav/BasicNav",
+      "header": "header/LightBannerHeader",
+      "article": "article/ReaderArticle",
+      "footer": "footer/BasicFooter"
+    },
+    "fontFamily": "Montserrat, sans-serif",
+    "heading": {
+      "fontWeight": 600,
+      "letterSpacing": "0.1em"
+    },
+    "colors": {
+      "text": "#346",
+      "background": "#fff",
+      "primary": "#0099e0",
+      "secondary": "#ab61ff",
+      "highlight": "#f7b",
+      "muted": "#fffab3",
+      "border": "#ccd"
+    }
+  },
+  "content": [
+    {
+      "component": "nav",
+      "links": [
+        {
+          "href": "https://github.com/jxnblk/h0",
+          "text": "GitHub"
+        },
+        {
+          "href": "https://npmjs.com/package/h0",
+          "text": "npm"
+        }
+      ]
+    },
+    {
+      "component": "header",
+      "heading": "h0",
+      "subhead": "Hyperminimal functional DOM element microlibrary",
+      "children": [
+        {
+          "component": "ui/TweetButton",
+          "text": "h0: Hyperminimal functional DOM element microlibrary",
+          "url": ""
+        },
+        {
+          "component": "ui/GithubButton",
+          "user": "jxnblk",
+          "repo": "h0"
+        }
+      ],
+      "text": "v1.0.0-beta.4"
+    },
+    {
+      "component": "article",
+      "metadata": {
+        "source": "github.readme"
+      },
+      "html": "\n<p><img src=\"https://cloud.githubusercontent.com/assets/3451712/16896009/c90f18f0-4b54-11e6-81e3-dbde27b3fcb0.png\" alt=\"h0\"></p>\n<p>Hyperminimal functional DOM element microlibrary</p>\n<p><a href=\"https://travis-ci.org/jxnblk/h0\"><img src=\"https://travis-ci.org/jxnblk/h0.svg?branch=master\" alt=\"Build Status\"></a></p>\n<p><strong>Experimental</strong></p>\n<pre>npm i h0</pre><h2 id=\"basic-usage\">Basic usage</h2>\n<pre><span class=\"hljs-keyword\">import</span> h <span class=\"hljs-keyword\">from</span> <span class=\"hljs-string\">&apos;h0&apos;</span>\n\n<span class=\"hljs-keyword\">const</span> tree = h(<span class=\"hljs-string\">&apos;div&apos;</span>)({\n  style: {\n    padding: <span class=\"hljs-number\">32</span>\n  }\n})(\n  h(<span class=\"hljs-string\">&apos;h1&apos;</span>)(<span class=\"hljs-string\">&apos;hello&apos;</span>)\n)</pre><h2 id=\"creating-element-functions\">Creating element functions</h2>\n<pre><span class=\"hljs-keyword\">const</span> div = h(<span class=\"hljs-string\">&apos;div&apos;</span>)\n<span class=\"hljs-keyword\">const</span> h1 = h(<span class=\"hljs-string\">&apos;h1&apos;</span>)\n<span class=\"hljs-keyword\">const</span> a = h(<span class=\"hljs-string\">&apos;a&apos;</span>)\n\n<span class=\"hljs-keyword\">const</span> tree = div(\n  h1(<span class=\"hljs-string\">&apos;hello&apos;</span>),\n  a({ href: <span class=\"hljs-string\">&apos;/hello&apos;</span> })(<span class=\"hljs-string\">&apos;hi&apos;</span>)\n)</pre><h2 id=\"creating-styled-element-functions\">Creating styled element functions</h2>\n<pre><span class=\"hljs-keyword\">const</span> h1 = h(<span class=\"hljs-string\">&apos;h1&apos;</span>)({\n  style: {\n    fontSize: <span class=\"hljs-number\">48</span>,\n    fontWeight: <span class=\"hljs-number\">500</span>\n  }\n})\n\n<span class=\"hljs-keyword\">const</span> tree = h1(<span class=\"hljs-string\">&apos;hello&apos;</span>)</pre><h2 id=\"api\">API</h2>\n<h3 id=\"-h-\"><code>h()</code></h3>\n<p>Function that returns an element creation function with the given tagname.\nThe returned function accepts either a plain object to set attributes, or a string or child elements to return an element.</p>\n<pre>h(<span class=\"hljs-string\">&apos;div&apos;</span>)\n<span class=\"hljs-comment\">// returns an element creation function</span>\n\nh(<span class=\"hljs-string\">&apos;div&apos;</span>)({ id: <span class=\"hljs-string\">&apos;hi&apos;</span> })\n<span class=\"hljs-comment\">// returns an element creation function with attributes</span>\n\nh(<span class=\"hljs-string\">&apos;div&apos;</span>)({ id: <span class=\"hljs-string\">&apos;hi&apos;</span> })(<span class=\"hljs-string\">&apos;hello&apos;</span>)\n<span class=\"hljs-comment\">// returns a DOM element with an id and text content</span>\n<span class=\"hljs-comment\">// &lt;div id=&apos;hi&apos;&gt;hello&lt;/div&gt;</span>\n\nh(<span class=\"hljs-string\">&apos;div&apos;</span>)(<span class=\"hljs-string\">&apos;hello&apos;</span>)\n<span class=\"hljs-comment\">// returns a DOM element with text content</span>\n<span class=\"hljs-comment\">// &lt;div&gt;hello&lt;/div&gt;</span>\n\nh(<span class=\"hljs-string\">&apos;div&apos;</span>)(\n  h(<span class=\"hljs-string\">&apos;h1&apos;</span>)(<span class=\"hljs-string\">&apos;hello&apos;</span>)\n)\n<span class=\"hljs-comment\">// returns a DOM element with child element</span>\n<span class=\"hljs-comment\">// &lt;div&gt;</span>\n<span class=\"hljs-comment\">//   &lt;h1&gt;hello&lt;/h1&gt;</span>\n<span class=\"hljs-comment\">// &lt;/div&gt;</span></pre><p>MIT License</p>\n"
+    },
+    {
+      "component": "footer",
+      "links": [
+        {
+          "href": "https://github.com/jxnblk/h0",
+          "text": "GitHub"
+        },
+        {
+          "href": "https://github.com/jxnblk",
+          "text": "jxnblk"
+        }
+      ]
+    }
+  ]
+}
