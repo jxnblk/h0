@@ -61,16 +61,22 @@ Function that returns an element creation function with the given tagname.
 The returned function accepts either a plain object to set attributes, or a string or child elements to return an element.
 
 ```js
-const tree = h('div')
+h('div')
 // returns an element creation function
+```
 
+```js
 h('div')({ class: 'hi' })
 // returns an element creation function with attributes
+```
 
+```js
 h('div')({ class: 'hi' })('hello')
 // returns a DOM element with an id and text content
 // <div class='hi'>hello</div>
+```
 
+```js
 h('div')({
   style: {
     color: 'blue'
@@ -78,11 +84,15 @@ h('div')({
 })('hello')
 // Style objects are converted to strings
 // <div style='color:blue'>hello</div>
+```
 
+```js
 h('div')('hello')
 // returns a DOM element with text content
 // <div>hello</div>
+```
 
+```js
 h('div')(
   h('h1')('hello')
 )
