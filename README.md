@@ -71,6 +71,14 @@ h('div')({ class: 'hi' })('hello')
 // returns a DOM element with an id and text content
 // <div class='hi'>hello</div>
 
+h('div')({
+  style: {
+    color: 'blue'
+  }
+})('hello')
+// Style objects are converted to strings
+// <div style='color:blue'>hello</div>
+
 h('div')('hello')
 // returns a DOM element with text content
 // <div>hello</div>
