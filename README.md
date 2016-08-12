@@ -61,7 +61,7 @@ Function that returns an element creation function with the given tagname.
 The returned function accepts either a plain object to set attributes, or a string or child elements to return an element.
 
 ```js
-h('div')
+const tree = h('div')
 // returns an element creation function
 
 h('div')({ class: 'hi' })
