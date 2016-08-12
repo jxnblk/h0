@@ -42,6 +42,14 @@ h(&apos;div&apos;)({ class: &apos;hi&apos; })(&apos;hello&apos;)
 // returns a DOM element with an id and text content
 // &lt;div class=&apos;hi&apos;&gt;hello&lt;/div&gt;
 
+h(&apos;div&apos;)({
+  style: {
+    color: &apos;blue&apos;
+  }
+})(&apos;hello&apos;)
+// Style objects are converted to strings
+// &lt;div style=&apos;color:blue&apos;&gt;hello&lt;/div&gt;
+
 h(&apos;div&apos;)(&apos;hello&apos;)
 // returns a DOM element with text content
 // &lt;div&gt;hello&lt;/div&gt;
