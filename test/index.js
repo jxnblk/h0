@@ -72,3 +72,10 @@ test('is nestable', t => {
   t.regex(tree.innerHTML, /hi/)
 })
 
+test('creates svg tags', t => {
+  const tree = h('svg')(
+    h('path')()
+  )
+  t.is(tree.tagName, 'svg')
+})
+

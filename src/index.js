@@ -1,6 +1,94 @@
 
 import transformProps from './transform-props'
 
+const svgTags = [
+  'svg',
+  'altGlyph',
+  'altGlyphDef',
+  'altGlyphItem',
+  'animate',
+  'animateColor',
+  'animateMotion',
+  'animateTransform',
+  'circle',
+  'clipPath',
+  'color-profile',
+  'cursor',
+  'defs',
+  'desc',
+  'ellipse',
+  'feBlend',
+  'feColorMatrix',
+  'feComponentTransfer',
+  'feComposite',
+  'feConvolveMatrix',
+  'feDiffuseLighting',
+  'feDisplacementMap',
+  'feDistantLight',
+  'feFlood',
+  'feFuncA',
+  'feFuncB',
+  'feFuncG',
+  'feFuncR',
+  'feGaussianBlur',
+  'feImage',
+  'feMerge',
+  'feMergeNode',
+  'feMorphology',
+  'feOffset',
+  'fePointLight',
+  'feSpecularLighting',
+  'feSpotLight',
+  'feTile',
+  'feTurbulence',
+  'filter',
+  'font',
+  'font-face',
+  'font-face-format',
+  'font-face-name',
+  'font-face-src',
+  'font-face-uri',
+  'foreignObject',
+  'g',
+  'glyph',
+  'glyphRef',
+  'hkern',
+  'image',
+  'line',
+  'linearGradient',
+  'marker',
+  'mask',
+  'metadata',
+  'missing-glyph',
+  'mpath',
+  'path',
+  'pattern',
+  'polygon',
+  'polyline',
+  'radialGradient',
+  'rect',
+  'set',
+  'stop',
+  'switch',
+  'symbol',
+  'text',
+  'textPath',
+  // 'title',
+  'tref',
+  'tspan',
+  'use',
+  'view',
+  'vkern'
+]
+
+const createEl = tag => {
+  if (svgTags.indexOf(tag) !== -1) {
+    return document.createElementNS('svg', tag)
+  }
+
+  return document.createElement(tag)
+}
+
 const h = tag => (...args) => isProps(args[0])
   ? applyProps(tag)(args[0])
   : appendChildren(tag)(...args)
@@ -27,7 +115,7 @@ const applyProps = tag => props => (...args) => {
 }
 
 const appendChildren = tag => (...children) => {
-  const el = document.createElement(tag)
+  const el = createEl(tag)
   children.map(c => c instanceof Element ? c : document.createTextNode(c))
     .forEach(c => el.appendChild(c))
   return el
