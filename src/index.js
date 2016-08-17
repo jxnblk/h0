@@ -83,7 +83,7 @@ const svgTags = [
 
 const createEl = tag => {
   if (svgTags.indexOf(tag) !== -1) {
-    return document.createElementNS('svg', tag)
+    return document.createElementNS('http://www.w3.org/2000/svg', tag)
   }
 
   return document.createElement(tag)
@@ -115,9 +115,25 @@ const applyProps = tag => props => (...args) => {
 }
 
 const appendChildren = tag => (...children) => {
+  if (typeof children === 'undefined') {
+    console.log('appendChildren no children', tag)
+  }
   const el = createEl(tag)
-  children.map(c => c instanceof Element ? c : document.createTextNode(c))
-    .forEach(c => el.appendChild(c))
+  children.map(c => {
+    if (typeof c === 'function') {
+      return c()
+    } else if (typeof c === 'string' || typeof c === 'number') {
+      return document.createTextNode(c)
+    } else if (c instanceof Element) {
+      return c
+    }
+    return
+  })
+  .filter(c => typeof c !== 'undefined' && c !== null && c !== false)
+  .forEach(c => {
+    el.appendChild(c)
+  })
+
   return el
 }
 
