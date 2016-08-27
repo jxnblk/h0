@@ -102,4 +102,16 @@ h('div')(
 // </div>
 ```
 
+```js
+const data = ['Hello', 'World!']
+h('div')(
+  data.map(d => h('h1')(d))
+)
+// returns a DOM element with child element
+// <div>
+//   <h1>Hello</h1>
+//   <h1>World!</h1>
+// </div>
+```
+
 MIT License
