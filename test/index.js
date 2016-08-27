@@ -72,3 +72,18 @@ test('is nestable', t => {
   t.regex(tree.innerHTML, /hi/)
 })
 
+test('accepts arrays of elements', t => {
+  t.plan(4)
+  const data = [
+    'Hello',
+    'world!'
+  ]
+  const tree = h('div')(
+    data.map(d => h('p')(d))
+  )
+  t.is(tree.tagName, 'DIV')
+  t.regex(tree.innerHTML, /^<p>/)
+  t.regex(tree.innerHTML, /Hello/)
+  t.regex(tree.innerHTML, /world!/)
+})
+
