@@ -72,3 +72,10 @@ test('is nestable', t => {
   t.regex(tree.innerHTML, /hi/)
 })
 
+test('sets __html as innerHTML', t => {
+  const tree = h('div')({
+    __html: '<a href="#!">Hello</a>'
+  })()
+  t.regex(tree.innerHTML, /<a\shref/)
+})
+
