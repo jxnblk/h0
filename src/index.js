@@ -19,6 +19,8 @@ const applyProps = tag => props => (...args) => {
   Object.keys(p).forEach(k => {
     if(/^on/.test(k)) {
       el[k] = p[k]
+    } else if (k === '__html') {
+      el.innerHTML = p[k]
     } else {
       el.setAttribute(k, p[k])
     }
